@@ -7,7 +7,7 @@ test("Frontend loads and basic functionality works", async ({ page }) => {
   // Wait for page to load and check if it's accessible
   await expect(page.locator('body')).toBeVisible();
   
-  // Try to find "My List" or wait for the list to be created
+  // Try to find "My List" or wait for the list to be created  
   try {
     await expect(page.locator("text=My List").first()).toBeVisible({ timeout: 10000 });
     console.log("Found 'My List' - app loaded successfully");
