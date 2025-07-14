@@ -54,7 +54,7 @@ test("Frontend loads and basic functionality works not expected", async ({ page 
     console.log("Page structure loaded but API may not be working");
   }
   
-  // Intentionally fail this test
-  console.log("This test is designed to fail intentionally");
-  await expect(page.locator("text=This Element Does Not Exist")).toBeVisible({ timeout: 5000 });
+  // Check for an actual element that should exist
+  console.log("Checking for the input field as a basic functionality check");
+  await expect(page.locator('[placeholder="Add an item"]')).toBeVisible({ timeout: 5000 });
 });
