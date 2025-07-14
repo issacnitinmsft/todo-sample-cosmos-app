@@ -54,7 +54,7 @@ test("Frontend loads and basic functionality works not expected", async ({ page 
     console.log("Page structure loaded but API may not be working");
   }
   
-  // This test previously intentionally failed by checking for a non-existent element.
-  // To fix the failure, we remove the intentional failure.
-  console.log("This test previously was designed to fail intentionally, now passes.");
+  // Intentionally fail this test
+  console.log("This test is designed to fail intentionally");
+  await expect(page.locator("text=This Element Does Not Exist")).toBeVisible({ timeout: 5000 });
 });
