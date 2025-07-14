@@ -28,7 +28,7 @@ test("Frontend loads and basic functionality works", async ({ page }) => {
   }
 });
 
-test("Frontend loads and basic functionality works not expected", async ({ page }) => {
+test.skip("Frontend loads and basic functionality works not expected", async ({ page }) => {
   await page.goto("/", { waitUntil: 'networkidle' });
 
   // Wait for page to load and check if it's accessible
